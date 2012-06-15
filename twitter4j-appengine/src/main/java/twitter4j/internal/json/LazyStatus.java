@@ -83,6 +83,9 @@ final class LazyStatus implements twitter4j.Status {
         return getTarget().getText();
     }
 
+    public String getRawText() {
+      throw new RuntimeException("Not implemented");
+    }
 
     /**
      * Returns the source

@@ -31,6 +31,7 @@ import static twitter4j.internal.util.z_T4JInternalParseUtil.getBoolean;
 import static twitter4j.internal.util.z_T4JInternalParseUtil.getDate;
 import static twitter4j.internal.util.z_T4JInternalParseUtil.getLong;
 import static twitter4j.internal.util.z_T4JInternalParseUtil.getUnescapedString;
+import static twitter4j.internal.util.z_T4JInternalParseUtil.getRawString;
 
 /**
  * A data class representing one single status of a user.
@@ -44,6 +45,7 @@ import static twitter4j.internal.util.z_T4JInternalParseUtil.getUnescapedString;
     private Date createdAt;
     private long id;
     private String text;
+    private String rawText;
     private String source;
     private boolean isTruncated;
     private long inReplyToStatusId;
@@ -84,6 +86,7 @@ import static twitter4j.internal.util.z_T4JInternalParseUtil.getUnescapedString;
     private void init(JSONObject json) throws TwitterException {
         id = getLong("id", json);
         text = getUnescapedString("text", json);
+        rawText = getRawString("text", json);
         source = getUnescapedString("source", json);
         createdAt = getDate("created_at", json);
         isTruncated = getBoolean("truncated", json);
@@ -224,6 +227,13 @@ import static twitter4j.internal.util.z_T4JInternalParseUtil.getUnescapedString;
      */
     public String getText() {
         return this.text;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public String getRawText() {
+        return this.rawText;
     }
 
     /**
