@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Fri Jun 15 22:16:54 CEST 2012
+twitter4j-core-2.2.5.pom>=
+twitter4j-core-2.2.5-sources.jar>=
+twitter4j-core-2.2.5.jar>=
+twitter4j-core-2.2.5-javadoc.jar>=
