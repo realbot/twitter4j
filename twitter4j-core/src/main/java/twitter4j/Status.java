@@ -48,6 +48,13 @@ public interface Status extends Comparable<Status>, TwitterResponse,
     String getText();
 
     /**
+     * Returns the raw text of the status
+     *
+     * @return the text
+     */
+    String getRawText();
+
+    /**
      * Returns the source
      *
      * @return the source

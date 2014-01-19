@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.twitter4j</groupId>
     <artifactId>twitter4j</artifactId>
-    <version>3.0.6-SNAPSHOT</version>
+    <version>3.0.5</version>
     <packaging>pom</packaging>
     <name>twitter4j</name>
     <description>A Java library for the Twitter API</description>
@@ -15,9 +15,9 @@
         </license>
     </licenses>
     <scm>
-        <url>https://github.com/yusuke/twitter4j</url>
-        <connection>scm:git:git://github.com/yusuke/twitter4j.git</connection>
-        <developerConnection>scm:git:git://github.com/yusuke/twitter4j.git
+        <url>https://xxxgithub.com/yusuke/twitter4j</url>
+        <connection>scm:git:git://xxxgithub.com/yusuke/twitter4j.git</connection>
+        <developerConnection>scm:git:git://xxxgithub.com/yusuke/twitter4j.git
         </developerConnection>
     </scm>
     <developers>
@@ -36,15 +36,15 @@
     </developers>
     <issueManagement>
         <system>Jira</system>
-        <url>http://twitter4j.org/jira/browse/TFJ</url>
+        <url>http://xxxtwitter4j.org/jira/browse/TFJ</url>
     </issueManagement>
     <mailingLists>
         <mailingList>
             <name>Twitter4J</name>
-            <subscribe>twitter4j-subscribe@googlegroups.com</subscribe>
-            <unsubscribe>twitter4j-unsubscribe@googlegroups.com</unsubscribe>
+            <subscribe>twitter4j-subscribe@xxxgooglegroups.com</subscribe>
+            <unsubscribe>twitter4j-unsubscribe@xxxxgooglegroups.com</unsubscribe>
             <post>twitter4j@googlegroups.com</post>
-            <archive>http://groups.google.com/group/twitter4j</archive>
+            <archive>http://xxxgroups.google.com/group/twitter4j</archive>
         </mailingList>
     </mailingLists>
     <distributionManagement>
@@ -52,7 +52,7 @@
             <id>sonatype-nexus-staging</id>
             <name>Nexus Release Repository</name>
             <uniqueVersion>false</uniqueVersion>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/
+            <url>http://oss.xxxx.org/service/local/staging/deploy/maven2/
             </url>
         </repository>
         <snapshotRepository>

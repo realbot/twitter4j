@@ -41,6 +41,7 @@ import static twitter4j.internal.json.z_T4JInternalParseUtil.*;
     private Date createdAt;
     private long id;
     private String text;
+	private String rawText;
     private String source;
     private boolean isTruncated;
     private long inReplyToStatusId;
@@ -183,8 +184,11 @@ import static twitter4j.internal.json.z_T4JInternalParseUtil.*;
             hashtagEntities = hashtagEntities == null ? new HashtagEntity[0] : hashtagEntities;
             symbolEntities = symbolEntities == null ? new SymbolEntity[0] : symbolEntities;
             mediaEntities = mediaEntities == null ? new MediaEntity[0] : mediaEntities;
-            text = HTMLEntity.unescapeAndSlideEntityIncdices(json.getString("text"), userMentionEntities,
-                    urlEntities, hashtagEntities, mediaEntities);
+			text = getUnescapedString("text", json);
+			// removed by realbot HTMLEntity.unescapeAndSlideEntityIncdices(json.getString("text"), userMentionEntities,
+			// urlEntities, hashtagEntities, mediaEntities);
+			rawText = getRawString("text", json);
+			
             if (!json.isNull("current_user_retweet")) {
                 currentUserRetweetId = json.getJSONObject("current_user_retweet").getLong("id");
             }
@@ -211,6 +215,13 @@ import static twitter4j.internal.json.z_T4JInternalParseUtil.*;
     public Date getCreatedAt() {
         return this.createdAt;
     }
+	
+	/**
+	 * {@inheritDoc}
+	 */
+	public String getRawText() {
+		return this.rawText;
+	}
 
     /**
      * {@inheritDoc}
